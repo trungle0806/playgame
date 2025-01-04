@@ -1,0 +1,61 @@
+/* PlayerAsset.css */
+.player-asset-list {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.player-asset-form {
+    margin-bottom: 20px;
+}
+
+.player-asset-form input {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+}
+
+.player-asset-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.player-asset-form button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #b52a36;
+}

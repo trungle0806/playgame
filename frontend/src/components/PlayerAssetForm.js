@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axiosInstance from '../axiosInstance';
+import { FaPlus } from 'react-icons/fa';
 
 function PlayerAssetForm({ onPlayerAssetAdded }) {
     const [playerId, setPlayerId] = useState('');
@@ -16,13 +17,15 @@ function PlayerAssetForm({ onPlayerAssetAdded }) {
         try {
             const response = await axiosInstance.post('/PlayerAsset', newPlayerAsset);
             onPlayerAssetAdded(response.data);
+            setPlayerId('');
+            setAssetId('');
         } catch (error) {
             console.error('Error assigning asset to player:', error);
         }
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="player-asset-form" onSubmit={handleSubmit}>
             <input
                 type="text"
                 value={playerId}
@@ -37,7 +40,9 @@ function PlayerAssetForm({ onPlayerAssetAdded }) {
                 placeholder="Asset ID"
                 required
             />
-            <button type="submit">Assign Asset to Player</button>
+            <button type="submit">
+                <FaPlus /> Assign
+            </button>
         </form>
     );
 }

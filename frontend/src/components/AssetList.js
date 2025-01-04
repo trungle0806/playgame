@@ -51,6 +51,7 @@ function AssetList() {
             <ul>
                 {assets.map((asset) => (
                     <li key={asset.assetId} className="asset-item">
+                        <span>Id: {asset.assetId} </span><br/>
                         <span>{asset.assetName} - Level {asset.levelRequire}</span>
                         <div className="asset-actions">
                             <button onClick={() => handleEdit(asset)} className="edit-btn">
